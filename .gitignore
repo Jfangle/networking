@@ -1,0 +1,73 @@
+# Python-specific ignores
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+*.so
+*.pyd
+*.pyo
+*.pyc
+.Python
+env/
+venv/
+ENV/
+*.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+coverage.xml
+*.cover
+*.cache
+pytest_cache/
+*.log
+
+# Networking project ignores
+# Ignore common networking-related temporary or config files
+*.pcap
+*.pcapng
+*.log
+*.tmp
+*.bak
+capture_*.txt
+network_logs/
+temp_configs/
+
+# macOS-specific ignores
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# General project ignores
+# Ignore IDE or editor files
+*.swp
+*.swo
+*.swn
+.vscode/
+.idea/
+*.iml
+
+# Ignore sensitive or local config files
+*.env
+secrets.json
+config.local.ini
+private_key*
+*.pem
+*.key
+*.cert
+
+# Ignore build artifacts or output files
+*.out
+*.bin
+output/
+logs/
+*.zip
+*.tar.gz
+
+# Allow project-specific files to remain
+!.gitignore
+!README.md
+!LICENSE
