@@ -2,7 +2,7 @@ import socket
 
 def get_ip_address(website):
     try:
-        # Remove protocol if present
+        # Remove HTTP or HTTPS protocol if present
         if website.startswith('http://'):
             website = website[7:]
         elif website.startswith('https://'):
@@ -19,10 +19,19 @@ def get_ip_address(website):
     except Exception as e:
         return f"Error: Something went wrong - {str(e)}"
 
-# Get user input and process
-website = input("Enter a website to lookup (e.g., google.com): ")
-result = get_ip_address(website)
-
-# Display result
-print(f"\nWebsite: {website}")
-print(f"IP Address: {result}")
+# Main loop for continuous IP lookups
+while True:
+    # Get user input
+    website = input("\nEnter a website to lookup (e.g., google.com) or type 'quit' to exit: ")
+    
+    # Check if user wants to quit
+    if website.lower() == 'quit':
+        print("Exiting program. Goodbye!")
+        break
+    
+    # Process the website lookup
+    result = get_ip_address(website)
+    
+    # Display result
+    print(f"\nWebsite: {website}")
+    print(f"IP Address: {result}")
